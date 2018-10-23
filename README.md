@@ -1,2 +1,2 @@
 # bc-test-tip
-test project for better collective
+Test project for better collective
