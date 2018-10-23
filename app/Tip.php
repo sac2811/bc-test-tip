@@ -5,8 +5,6 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-
 class Tip extends Model
 {
     /**
@@ -22,5 +20,4 @@ class Tip extends Model
     protected $primaryKey = 'guid';
 
     use SoftDeletes;
-
 }
