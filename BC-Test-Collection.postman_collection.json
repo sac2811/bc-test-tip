@@ -1,0 +1,373 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BC-Test-Collection",
+		"_postman_id": "20d1dd40-5725-0edd-4f07-d4d85cce236b",
+		"description": "Use these API calls in sequence for CRUD application with authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register API",
+			"request": {
+				"url": "http://tip-local/api/register",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sachin Adlinge",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sac2811@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "First, register a user to use this API"
+			},
+			"response": []
+		},
+		{
+			"name": "Login API",
+			"request": {
+				"url": "http://tip-local/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "sac2811@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "0KCQDKQ4KL6xKt86NQ480UIFkSDbErBjmluf4E3V",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Authenticate the user with the access token"
+			},
+			"response": []
+		},
+		{
+			"name": "Tip List API",
+			"request": {
+				"url": "http://tip-local/api/tips",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwYjdjYTMyYTI0MzI3MThlYjljNDVmMzA4MTJjZTA1YzhhMzBmYjA3OTU3ODBjMTg5ZGU5ZjZhMzE5Yjg1NzMyNzMyYjYwOGU2ZGVjZDExIn0.eyJhdWQiOiIxIiwianRpIjoiNDBiN2NhMzJhMjQzMjcxOGViOWM0NWYzMDgxMmNlMDVjOGEzMGZiMDc5NTc4MGMxODlkZTlmNmEzMTliODU3MzI3MzJiNjA4ZTZkZWNkMTEiLCJpYXQiOjE1NDAyOTEwNDgsIm5iZiI6MTU0MDI5MTA0OCwiZXhwIjoxNTcxODI3MDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.c45N-eNqLqisIALrVxNEnpBLTMh-p0lDCsIXvm-QH6emaBQ_06LvyYaajmjXwAQteJIqO4KrtLcX6Qzih1KK8TXjg5eeeeJAm-sWmRY9dGZskaAM493MLja7qIJ-DHLkqEfqgQ0JswqJPOBe8E2WQDwzid_8iGBBM3U6C5mbev7KkMZRzkoyM8_aw4ItxPi3Thae_cw2YbL93L17OJMQTrtT494tQcDfS-Gl6-eQjY3UqUmqBVf0H2mNHvpA-yCK0BUtQYVB_IYra3y8cOrCEFOx0i2V3KfTlXkktAaphCVrmL23f4y1NoY24t40QUYnhw491pacfBLa7pgY_-8ImPlD8ArA2Aiq1RI19jQnRmUiFt_ozwoVL6OQtamRMpI51lHFVGv6EqTSIb5Zux1nAvFRQXdAAjAmOuumlGZG08MGtP3q3fDbRxuytO_W8WbGfllDA-0b8C1l33y4dMEmhGeN3HwIP9tRUaKQx8DCpcPMVBRQtEXNxI2mGabMGgxDzUBA9Lthwt02faQeV04LztbFsNPAWOVSB3ZYVPCEIAB_G7SXKYVe3I8EiN3eH39_YrsdHIdZz1_LuAz8cRzaDcRzFj9-wFcU60lleVqNNBL8oJHXs-643JvYea-pXm6KquHKQiEw68Wl37vGdceXugIa6q9aI1y37TKV3sRv46U",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "sac2811@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "0KCQDKQ4KL6xKt86NQ480UIFkSDbErBjmluf4E3V",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Fetch all tips. Initially, it will return empty result set"
+			},
+			"response": []
+		},
+		{
+			"name": "Tip Create API",
+			"request": {
+				"url": "http://tip-local/api/tips",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwYjdjYTMyYTI0MzI3MThlYjljNDVmMzA4MTJjZTA1YzhhMzBmYjA3OTU3ODBjMTg5ZGU5ZjZhMzE5Yjg1NzMyNzMyYjYwOGU2ZGVjZDExIn0.eyJhdWQiOiIxIiwianRpIjoiNDBiN2NhMzJhMjQzMjcxOGViOWM0NWYzMDgxMmNlMDVjOGEzMGZiMDc5NTc4MGMxODlkZTlmNmEzMTliODU3MzI3MzJiNjA4ZTZkZWNkMTEiLCJpYXQiOjE1NDAyOTEwNDgsIm5iZiI6MTU0MDI5MTA0OCwiZXhwIjoxNTcxODI3MDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.c45N-eNqLqisIALrVxNEnpBLTMh-p0lDCsIXvm-QH6emaBQ_06LvyYaajmjXwAQteJIqO4KrtLcX6Qzih1KK8TXjg5eeeeJAm-sWmRY9dGZskaAM493MLja7qIJ-DHLkqEfqgQ0JswqJPOBe8E2WQDwzid_8iGBBM3U6C5mbev7KkMZRzkoyM8_aw4ItxPi3Thae_cw2YbL93L17OJMQTrtT494tQcDfS-Gl6-eQjY3UqUmqBVf0H2mNHvpA-yCK0BUtQYVB_IYra3y8cOrCEFOx0i2V3KfTlXkktAaphCVrmL23f4y1NoY24t40QUYnhw491pacfBLa7pgY_-8ImPlD8ArA2Aiq1RI19jQnRmUiFt_ozwoVL6OQtamRMpI51lHFVGv6EqTSIb5Zux1nAvFRQXdAAjAmOuumlGZG08MGtP3q3fDbRxuytO_W8WbGfllDA-0b8C1l33y4dMEmhGeN3HwIP9tRUaKQx8DCpcPMVBRQtEXNxI2mGabMGgxDzUBA9Lthwt02faQeV04LztbFsNPAWOVSB3ZYVPCEIAB_G7SXKYVe3I8EiN3eH39_YrsdHIdZz1_LuAz8cRzaDcRzFj9-wFcU60lleVqNNBL8oJHXs-643JvYea-pXm6KquHKQiEw68Wl37vGdceXugIa6q9aI1y37TKV3sRv46U",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Tip 1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tip Description 1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Create the first tip"
+			},
+			"response": []
+		},
+		{
+			"name": "Tip Create API",
+			"request": {
+				"url": "http://tip-local/api/tips",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwYjdjYTMyYTI0MzI3MThlYjljNDVmMzA4MTJjZTA1YzhhMzBmYjA3OTU3ODBjMTg5ZGU5ZjZhMzE5Yjg1NzMyNzMyYjYwOGU2ZGVjZDExIn0.eyJhdWQiOiIxIiwianRpIjoiNDBiN2NhMzJhMjQzMjcxOGViOWM0NWYzMDgxMmNlMDVjOGEzMGZiMDc5NTc4MGMxODlkZTlmNmEzMTliODU3MzI3MzJiNjA4ZTZkZWNkMTEiLCJpYXQiOjE1NDAyOTEwNDgsIm5iZiI6MTU0MDI5MTA0OCwiZXhwIjoxNTcxODI3MDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.c45N-eNqLqisIALrVxNEnpBLTMh-p0lDCsIXvm-QH6emaBQ_06LvyYaajmjXwAQteJIqO4KrtLcX6Qzih1KK8TXjg5eeeeJAm-sWmRY9dGZskaAM493MLja7qIJ-DHLkqEfqgQ0JswqJPOBe8E2WQDwzid_8iGBBM3U6C5mbev7KkMZRzkoyM8_aw4ItxPi3Thae_cw2YbL93L17OJMQTrtT494tQcDfS-Gl6-eQjY3UqUmqBVf0H2mNHvpA-yCK0BUtQYVB_IYra3y8cOrCEFOx0i2V3KfTlXkktAaphCVrmL23f4y1NoY24t40QUYnhw491pacfBLa7pgY_-8ImPlD8ArA2Aiq1RI19jQnRmUiFt_ozwoVL6OQtamRMpI51lHFVGv6EqTSIb5Zux1nAvFRQXdAAjAmOuumlGZG08MGtP3q3fDbRxuytO_W8WbGfllDA-0b8C1l33y4dMEmhGeN3HwIP9tRUaKQx8DCpcPMVBRQtEXNxI2mGabMGgxDzUBA9Lthwt02faQeV04LztbFsNPAWOVSB3ZYVPCEIAB_G7SXKYVe3I8EiN3eH39_YrsdHIdZz1_LuAz8cRzaDcRzFj9-wFcU60lleVqNNBL8oJHXs-643JvYea-pXm6KquHKQiEw68Wl37vGdceXugIa6q9aI1y37TKV3sRv46U",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Tip 2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tip Description 2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Create the second tip"
+			},
+			"response": []
+		},
+		{
+			"name": "Tip Read API",
+			"request": {
+				"url": "http://tip-local/api/tips/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwYjdjYTMyYTI0MzI3MThlYjljNDVmMzA4MTJjZTA1YzhhMzBmYjA3OTU3ODBjMTg5ZGU5ZjZhMzE5Yjg1NzMyNzMyYjYwOGU2ZGVjZDExIn0.eyJhdWQiOiIxIiwianRpIjoiNDBiN2NhMzJhMjQzMjcxOGViOWM0NWYzMDgxMmNlMDVjOGEzMGZiMDc5NTc4MGMxODlkZTlmNmEzMTliODU3MzI3MzJiNjA4ZTZkZWNkMTEiLCJpYXQiOjE1NDAyOTEwNDgsIm5iZiI6MTU0MDI5MTA0OCwiZXhwIjoxNTcxODI3MDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.c45N-eNqLqisIALrVxNEnpBLTMh-p0lDCsIXvm-QH6emaBQ_06LvyYaajmjXwAQteJIqO4KrtLcX6Qzih1KK8TXjg5eeeeJAm-sWmRY9dGZskaAM493MLja7qIJ-DHLkqEfqgQ0JswqJPOBe8E2WQDwzid_8iGBBM3U6C5mbev7KkMZRzkoyM8_aw4ItxPi3Thae_cw2YbL93L17OJMQTrtT494tQcDfS-Gl6-eQjY3UqUmqBVf0H2mNHvpA-yCK0BUtQYVB_IYra3y8cOrCEFOx0i2V3KfTlXkktAaphCVrmL23f4y1NoY24t40QUYnhw491pacfBLa7pgY_-8ImPlD8ArA2Aiq1RI19jQnRmUiFt_ozwoVL6OQtamRMpI51lHFVGv6EqTSIb5Zux1nAvFRQXdAAjAmOuumlGZG08MGtP3q3fDbRxuytO_W8WbGfllDA-0b8C1l33y4dMEmhGeN3HwIP9tRUaKQx8DCpcPMVBRQtEXNxI2mGabMGgxDzUBA9Lthwt02faQeV04LztbFsNPAWOVSB3ZYVPCEIAB_G7SXKYVe3I8EiN3eH39_YrsdHIdZz1_LuAz8cRzaDcRzFj9-wFcU60lleVqNNBL8oJHXs-643JvYea-pXm6KquHKQiEw68Wl37vGdceXugIa6q9aI1y37TKV3sRv46U",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Tip 2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tip Description 2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Fetch the first tip"
+			},
+			"response": []
+		},
+		{
+			"name": "Tip Update API",
+			"request": {
+				"url": {
+					"raw": "http://tip-local/api/tips/1?title=Tip 1.1&description=Tip description 1.1",
+					"protocol": "http",
+					"host": [
+						"tip-local"
+					],
+					"path": [
+						"api",
+						"tips",
+						"1"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Tip 1.1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "description",
+							"value": "Tip description 1.1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwYjdjYTMyYTI0MzI3MThlYjljNDVmMzA4MTJjZTA1YzhhMzBmYjA3OTU3ODBjMTg5ZGU5ZjZhMzE5Yjg1NzMyNzMyYjYwOGU2ZGVjZDExIn0.eyJhdWQiOiIxIiwianRpIjoiNDBiN2NhMzJhMjQzMjcxOGViOWM0NWYzMDgxMmNlMDVjOGEzMGZiMDc5NTc4MGMxODlkZTlmNmEzMTliODU3MzI3MzJiNjA4ZTZkZWNkMTEiLCJpYXQiOjE1NDAyOTEwNDgsIm5iZiI6MTU0MDI5MTA0OCwiZXhwIjoxNTcxODI3MDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.c45N-eNqLqisIALrVxNEnpBLTMh-p0lDCsIXvm-QH6emaBQ_06LvyYaajmjXwAQteJIqO4KrtLcX6Qzih1KK8TXjg5eeeeJAm-sWmRY9dGZskaAM493MLja7qIJ-DHLkqEfqgQ0JswqJPOBe8E2WQDwzid_8iGBBM3U6C5mbev7KkMZRzkoyM8_aw4ItxPi3Thae_cw2YbL93L17OJMQTrtT494tQcDfS-Gl6-eQjY3UqUmqBVf0H2mNHvpA-yCK0BUtQYVB_IYra3y8cOrCEFOx0i2V3KfTlXkktAaphCVrmL23f4y1NoY24t40QUYnhw491pacfBLa7pgY_-8ImPlD8ArA2Aiq1RI19jQnRmUiFt_ozwoVL6OQtamRMpI51lHFVGv6EqTSIb5Zux1nAvFRQXdAAjAmOuumlGZG08MGtP3q3fDbRxuytO_W8WbGfllDA-0b8C1l33y4dMEmhGeN3HwIP9tRUaKQx8DCpcPMVBRQtEXNxI2mGabMGgxDzUBA9Lthwt02faQeV04LztbFsNPAWOVSB3ZYVPCEIAB_G7SXKYVe3I8EiN3eH39_YrsdHIdZz1_LuAz8cRzaDcRzFj9-wFcU60lleVqNNBL8oJHXs-643JvYea-pXm6KquHKQiEw68Wl37vGdceXugIa6q9aI1y37TKV3sRv46U",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Tip 2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tip Description 2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Update the first tip"
+			},
+			"response": []
+		},
+		{
+			"name": "Tip Delete API",
+			"request": {
+				"url": "http://tip-local/api/tips/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwYjdjYTMyYTI0MzI3MThlYjljNDVmMzA4MTJjZTA1YzhhMzBmYjA3OTU3ODBjMTg5ZGU5ZjZhMzE5Yjg1NzMyNzMyYjYwOGU2ZGVjZDExIn0.eyJhdWQiOiIxIiwianRpIjoiNDBiN2NhMzJhMjQzMjcxOGViOWM0NWYzMDgxMmNlMDVjOGEzMGZiMDc5NTc4MGMxODlkZTlmNmEzMTliODU3MzI3MzJiNjA4ZTZkZWNkMTEiLCJpYXQiOjE1NDAyOTEwNDgsIm5iZiI6MTU0MDI5MTA0OCwiZXhwIjoxNTcxODI3MDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.c45N-eNqLqisIALrVxNEnpBLTMh-p0lDCsIXvm-QH6emaBQ_06LvyYaajmjXwAQteJIqO4KrtLcX6Qzih1KK8TXjg5eeeeJAm-sWmRY9dGZskaAM493MLja7qIJ-DHLkqEfqgQ0JswqJPOBe8E2WQDwzid_8iGBBM3U6C5mbev7KkMZRzkoyM8_aw4ItxPi3Thae_cw2YbL93L17OJMQTrtT494tQcDfS-Gl6-eQjY3UqUmqBVf0H2mNHvpA-yCK0BUtQYVB_IYra3y8cOrCEFOx0i2V3KfTlXkktAaphCVrmL23f4y1NoY24t40QUYnhw491pacfBLa7pgY_-8ImPlD8ArA2Aiq1RI19jQnRmUiFt_ozwoVL6OQtamRMpI51lHFVGv6EqTSIb5Zux1nAvFRQXdAAjAmOuumlGZG08MGtP3q3fDbRxuytO_W8WbGfllDA-0b8C1l33y4dMEmhGeN3HwIP9tRUaKQx8DCpcPMVBRQtEXNxI2mGabMGgxDzUBA9Lthwt02faQeV04LztbFsNPAWOVSB3ZYVPCEIAB_G7SXKYVe3I8EiN3eH39_YrsdHIdZz1_LuAz8cRzaDcRzFj9-wFcU60lleVqNNBL8oJHXs-643JvYea-pXm6KquHKQiEw68Wl37vGdceXugIa6q9aI1y37TKV3sRv46U",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Tip 2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tip Description 2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Delete the first tip"
+			},
+			"response": []
+		}
+	]
+}
