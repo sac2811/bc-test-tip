@@ -33,5 +33,21 @@ This application was developed in Laravel 5.7 and hence make sure the following 
 <strong>Testing with Postman</strong>
 <ul>
     <li>You can find the postman collection <strong>"BC-Test-Collection.postman_collection.json"</strong> in the project root directory</li>
-    <li></li>
+    <li>
+        <strong>Register API: POST http://domain.local/api/register</strong>
+        <ul>
+            <li>
+                REQUEST
+                <ul>
+                    <li>enter values for all required parameters</li>
+                </ul>
+            </li>
+            <li>
+                RESPONSE
+                <ul>
+                    <li>"token" is returned. Use this token in all CRUD request headers</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
 </ul>
