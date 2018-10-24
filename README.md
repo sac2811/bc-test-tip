@@ -18,8 +18,8 @@ This application was developed in Laravel 5.7 and hence make sure the following 
     <li>open terminal and go to project directory</li>
     <li>run command <strong>git init</strong></li>
     <li>run command <strong>git remote add origin https://github.com/sac2811/bc-test-tip.git</strong></li>
-    <li>run command git pull origin master</li>
-    <li>run command composer install</li>
+    <li>run command <strong>git pull origin master</strong></li>
+    <li>run command <strong>composer install</strong></li>
     <li>run command <strong>php artisan key:generate</strong> (in case the installation does not generate the key automatically)</li>
     <li>rename <strong>.env.example</strong> to <strong>.env</strong></li>
     <li>change database name, username and password in .env</li>
