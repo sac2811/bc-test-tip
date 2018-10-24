@@ -50,4 +50,162 @@ This application was developed in Laravel 5.7 and hence make sure the following 
             </li>
         </ul>
     </li>
+    <li>
+        <strong>Login API: POST http://domain.local/oauth/token</strong>
+        <ul>
+            <li>
+                REQUEST
+                <ul>
+                    <li>enter username and password of your choice</li>
+                    <li>grant_type should be 'password'</li>
+                    <li>client_id should be 2</li>
+                    <li>for client_secret go to your database table oauth_clients and look for the column "secret" whose id is 2</li>
+                </ul>
+            </li>
+            <li>
+                RESPONSE
+                <ul>
+                    <li>JSON data of login record</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Create API: POST http://domain.local/api/tips</strong>
+        <ul>
+            <li>
+                HEADERS
+                <ul>
+                    <li>Accept application/json</li>
+                    <li>Authorization Bearer [token received in Register API]</li>
+                </ul>
+            </li>
+            <li>
+                REQUEST
+                <ul>
+                    <li>title</li>
+                    <li>description</li>
+                </ul>
+            </li>
+            <li>
+                RESPONSE
+                <ul>
+                    <li>JSON data of created record</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Read One API: GET http://domain.local/api/tips/1</strong>
+        <ul>
+            <li>
+                HEADERS
+                <ul>
+                    <li>Accept application/json</li>
+                    <li>Authorization Bearer [token received in Register API]</li>
+                </ul>
+            </li>
+            <li>
+                REQUEST
+                <ul>
+                    <li>N/A</li>
+                </ul>
+            </li>
+            <li>
+                RESPONSE
+                <ul>
+                    <li>JSON data of record with id=1</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Read All API: GET http://tip-local/api/tips</strong>
+        <ul>
+            <li>
+                HEADERS
+                <ul>
+                    <li>Accept application/json</li>
+                    <li>Authorization Bearer [token received in Register API]</li>
+                </ul>
+            </li>
+            <li>
+                REQUEST
+                <ul>
+                    <li>N/A</li>
+                </ul>
+            </li>
+            <li>
+                RESPONSE
+                <ul>
+                    <li>JSON data of all records</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Update API: PUT http://domain.local/api/tips/1?title=Tip_2&description=Tip_description_2</strong>
+        <ul>
+            <li>
+                HEADERS
+                <ul>
+                    <li>Accept application/json</li>
+                    <li>Authorization Bearer [token received in Register API]</li>
+                </ul>
+            </li>
+            <li>
+                REQUEST
+                <ul>
+                    <li>N/A</li>
+                </ul>
+            </li>
+            <li>
+                RESPONSE
+                <ul>
+                    <li>JSON data of updated record</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>DELETE http://domain.local/api/tips/1</strong>
+        <ul>
+            <li>
+                HEADERS
+                <ul>
+                    <li>Accept application/json</li>
+                    <li>Authorization Bearer [token received in Register API]</li>
+                </ul>
+            </li>
+            <li>
+                REQUEST
+                <ul>
+                    <li>N/A</li>
+                </ul>
+            </li>
+            <li>
+                RESPONSE
+                <ul>
+                    <li>JSON data of deleted record</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
 </ul>
+<br>
+<br>
+<strong>Unit Testing with PHPUnit</strong>
+<br>
+Open your terminal and type command ./vendor/bin/phpunit
+<br>
+<br>
+<strong>Logging</strong>
+<br>
+All requests are handled with custom Logger class. View logs of all the requests in /storage/logs/laravel.log file
+<br>
+<br>
+<strong>PSR check</strong>
+<br>
+open terminal, navigate to project root directory and run command (don't forget the dot in the end of this command):
+phpcs --ignore=*/vendor/* --standard=PSR2 .
+<br>
